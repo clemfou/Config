@@ -1,0 +1,8 @@
+case ${KEYMAP} in
+    vicmd)
+        echo -ne '\e[4 q'
+        ;;
+    *)
+        echo -ne '\e[2 q'
+        ;;
+esac
