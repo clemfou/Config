@@ -12,7 +12,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-dirs-first true
 
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path "${HOME}/.zcompdump"
+zstyle ':completion::complete:*' cache-path "${HOME}/.zsh/cache"
 
 zstyle ':completion:*:descriptions' format '%U%F{129}Matching: %d%u%f'
 zstyle ':completion:*:corrections' format '%F{166}Error: %d %f%u'
