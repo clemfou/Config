@@ -1,0 +1,16 @@
+-- set leader key
+vim.g.mapleader = " "
+
+-- clear highlighted search patterns
+vim.keymap.set('n', '<Leader><BS>', ':nohls<CR>')
+
+-- move between splits
+vim.keymap.set('', '<C-j>', '<C-W>j')
+vim.keymap.set('', '<C-k>', '<C-W>k')
+vim.keymap.set('', '<C-h>', '<C-W>h')
+vim.keymap.set('', '<C-l>', '<C-W>l')
+
+-- run fzf
+vim.keymap.set('', '<C-p>', ':Files<CR>')
+
+vim.keymap.set('n', '<Leader>l', ':lua toggle_list()<CR>', { noremap = true, silent = true })
