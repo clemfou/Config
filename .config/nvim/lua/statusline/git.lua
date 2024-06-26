@@ -17,7 +17,7 @@ function M.show_git_branch()
     if is_git_repo() and vim.bo.modifiable then
         local dir = get_current_directory()
         local git_branch = vim.fn.system(
-            'git -C ' .. dir .. ' rev-parse --abbrev-ref HEAD'
+            'git -C ' .. dir .. ' symbolic-ref --short HEAD'
         )
         git_branch = vim.fn.substitute(git_branch, '\n', '', 'g')
 
