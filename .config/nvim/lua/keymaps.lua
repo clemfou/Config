@@ -10,7 +10,9 @@ vim.keymap.set('', '<C-k>', '<C-W>k')
 vim.keymap.set('', '<C-h>', '<C-W>h')
 vim.keymap.set('', '<C-l>', '<C-W>l')
 
--- run fzf
+-- fzf
 vim.keymap.set('', '<C-p>', ':Files<CR>')
+vim.keymap.set('', '<C-m>', ':Marks<CR>')
+vim.keymap.set('', '<C-h>', ':History<CR>')
 
 vim.keymap.set('n', '<Leader>l', ':lua toggle_list()<CR>', { noremap = true, silent = true })
