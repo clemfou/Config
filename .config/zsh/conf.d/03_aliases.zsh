@@ -48,8 +48,9 @@ function git_commit_finder() {
             --tiebreak=index \
             --layout=reverse \
             --header="F1: toggle preview, alt-enter: show diff, ctrl+c: copy commit hash" \
-            --preview="git show --color=always {1}" \
+            --preview="git show --oneline --color=always {1} | delta" \
+            --preview-window="top:50%" \
             --bind="F1:toggle-preview" \
-            --bind="alt-enter:execute:git show {1} | less" \
+            --bind="alt-enter:execute:git show {1} | delta" \
             --bind="ctrl-c:execute-silent(wl-copy {1})+accept"
 }
