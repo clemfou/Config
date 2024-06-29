@@ -2,8 +2,14 @@ fpath=(
     "${XDG_CONFIG_HOME}/zsh/zfunc"
     "${fpath[@]}"
 )
+
 autoload -Uz zle-keymap-select
+autoload -Uz zle-line-init
+autoload -Uz zle-line-finish
+
 zle -N zle-keymap-select
+zle -N zle-line-finish
+
 autoload -Uz print-256colors
 
 autoload -U colors && colors

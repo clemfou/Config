@@ -1,8 +1,34 @@
-case ${KEYMAP} in
-    vicmd)
-        echo -ne '\e[4 q'
-        ;;
-    *)
-        echo -ne '\e[2 q'
-        ;;
-esac
+# Change the cursor shape
+function zle-keymap-select {
+    local PREVIOUS_KEYMAP="${VI_KEYMAP}"
+
+    case "${KEYMAP}" in
+        vicmd)
+            case "${REGION_ACTIVE}" in
+                1)
+                    VI_KEYMAP="VISUAL"
+                    ;;
+                2)
+                    VI_KEYMAP="VISUAL_LINE"
+                    ;;
+                *)
+                    VI_KEYMAP="NORMAL"
+                    ;;
+            esac
+            ;;
+        viins|main)
+            VI_KEYMAP="INSERT"
+            ;;
+    esac
+
+    if [[ "${VI_KEYMAP}" != "${PREVIOUS_KEYMAP}" ]]; then
+        case $VI_KEYMAP in
+            NORMAL|VISUAL|VISUAL_LINE)
+                echo -ne "\e[4 q"
+                ;;
+            INSERT)
+                echo -ne "\e[2 q"
+                ;;
+        esac
+    fi
+}

@@ -1,0 +1,4 @@
+function zle-line-finish() {
+    zle -K viins
+    echo -ne "\e[2 q"
+}
