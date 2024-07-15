@@ -13,6 +13,6 @@ vim.keymap.set('', '<C-l>', '<C-W>l')
 -- fzf
 vim.keymap.set('', '<C-p>', ':Files<CR>')
 vim.keymap.set('', '<C-m>', ':Marks<CR>')
-vim.keymap.set('', '<C-h>', ':History<CR>')
+vim.keymap.set('', '<C-i>', ':History<CR>')
 
 vim.keymap.set('n', '<Leader>l', ':lua toggle_list()<CR>', { noremap = true, silent = true })
