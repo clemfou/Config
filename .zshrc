@@ -1,4 +1,5 @@
-eval $(dircolors)
+eval "$(dircolors)"
+eval "$(pyenv init -)"
 
 EXIT_CODE_ERR_ICON=$(echo -ne "\uf513")
 PROMPT_END_CHARACTER=$(echo -ne "\u00BB")
