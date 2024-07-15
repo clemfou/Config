@@ -17,6 +17,7 @@ bindkey -M vicmd cs change-surround
 bindkey -M vicmd ds delete-surround
 bindkey -M vicmd ys add-surround
 bindkey -M visual S add-surround
+bindkey -M vicmd '*' edit-command-line
 
 for km in viopp visual; do
     bindkey -M $km -- '-' vi-up-line-or-history
