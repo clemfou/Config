@@ -11,6 +11,7 @@ vim.call('plug#begin')
     Plug ('junegunn/fzf.vim')
     Plug ('junegunn/fzf')
     Plug ('tpope/vim-surround')
+    Plug ('tpope/vim-fugitive')
 vim.call('plug#end')
 
 utils = require('utils')
