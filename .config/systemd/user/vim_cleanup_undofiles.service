@@ -1,0 +1,6 @@
+[Unit]
+Description=Purge old vim undofiles
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash $HOME/.scripts/vim_cleanup_undofiles
