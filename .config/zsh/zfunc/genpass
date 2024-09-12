@@ -1,0 +1,9 @@
+# Generate a secure password
+
+function genpass {
+    local PASSWORD_LENGTH="${1:-12}"
+
+    tr --complement --delete '[:graph:]' < /dev/urandom | \
+        head --bytes "$PASSWORD_LENGTH"
+    echo
+}
