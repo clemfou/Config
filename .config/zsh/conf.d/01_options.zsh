@@ -1,7 +1,7 @@
 setopt auto_cd
 setopt auto_pushd
 setopt auto_remove_slash
-setopt brace_ccl
+# setopt brace_ccl
 setopt chase_links
 setopt clobber
 setopt correct

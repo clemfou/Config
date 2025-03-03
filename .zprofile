@@ -6,7 +6,7 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 export TERM=xterm-256color
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-path+=(
+PATH+=(
     "${HOME}/.local/bin"
     "${PYENV_ROOT}/bin"
 )

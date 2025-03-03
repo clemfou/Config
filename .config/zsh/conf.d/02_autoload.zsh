@@ -4,12 +4,6 @@ fpath=(
 )
 
 autoload -Uz genpass
-autoload -Uz zle-keymap-select
-autoload -Uz zle-line-finish
-autoload -Uz zle-line-init
-
-zle -N zle-keymap-select
-zle -N zle-line-finish
 
 autoload -Uz print-256colors
 

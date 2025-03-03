@@ -1,20 +1,8 @@
-alias config='PRE_COMMIT_ALLOW_NO_CONFIG=1 git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config="PRE_COMMIT_ALLOW_NO_CONFIG=1 git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
 local _gitLogFormat="%Cblue%h%Creset - %Cred[%ad]%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset"
 alias _gitLogOneline='git log --oneline --color=always --format=${_gitLogFormat} --date=format-local:%Y-%m-%d "$@"'
 
-if command -v nvim > /dev/null; then
-    EDITOR="/usr/bin/nvim"
-
-    alias vimdiff='nvim -d'
-    alias vim='nvim'
-
-elif command -v vim > /dev/null; then
-    EDITOR="/usr/bin/vim"
-else
-    EDITOR="/usr/bin/vi"
-fi
-
-export EDITOR
+export EDITOR="/usr/bin/nvim"
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -26,9 +14,6 @@ function git() {
     case "${1}" in
         lg)
             git_commit_finder
-            ;;
-        coc)
-            git_commit_checkout
             ;;
         *)
             command git "${@}"
