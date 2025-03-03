@@ -7,7 +7,7 @@
     name = clemfou
 
 [init]
-    defaultBranch = main
+    defaultBranch = master
 
 [merge]
     conflictstyle = diff3
