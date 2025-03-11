@@ -2,11 +2,10 @@ alias config="PRE_COMMIT_ALLOW_NO_CONFIG=1 git --git-dir=${HOME}/.cfg/ --work-tr
 local _gitLogFormat="%Cblue%h%Creset - %Cred[%ad]%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset"
 alias _gitLogOneline='git log --oneline --color=always --format=${_gitLogFormat} --date=format-local:%Y-%m-%d "$@"'
 
-export EDITOR="/usr/bin/nvim"
-
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias l='ls -lah'
+alias vim='nvim'
 
 alias tree='tree -C'
 
