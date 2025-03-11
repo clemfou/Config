@@ -16,3 +16,7 @@ vim.keymap.set('', '<C-m>', ':Marks<CR>')
 vim.keymap.set('', '<C-i>', ':History<CR>')
 
 vim.keymap.set('n', '<Leader>l', ':lua toggle_list()<CR>', { noremap = true, silent = true })
+
+-- remap [c and ]c in vimdiff mode
+vim.keymap.set('n', '<Leader>n', ']c', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>p', '[c', { noremap = true, silent = true })
