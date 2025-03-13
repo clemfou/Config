@@ -6,6 +6,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias l='ls -lah'
 alias vim='nvim'
+alias vimdiff='nvim -d'
 
 alias tree='tree -C'
 
